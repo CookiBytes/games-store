@@ -1,0 +1,50 @@
+/*
+Palette - ColorHunt
+https://colorhunt.co/palette/163991
+
+Rows & Columns - CodePen
+https://codepen.io/rachelandrew/pen/YqqdXL
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Assistant&display=swap");
+
+* {
+  font-family: "Assistant", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #2d132c;
+  color: #ffffff;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+input {
+  height: 50px;
+  width: 200px;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  color: #000000;
+  font-size: 20px;
+}
+
+::placeholder {
+  color: #000000;
+  opacity: 1;
+  font-size: 20px;
+}
+
+:-ms-input-placeholder {
+  color: #000000;
+}
+
+::-ms-input-placeholder {
+  color: #000000;
+}
+
+.searchbar {
+  float: left;
+}

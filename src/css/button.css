@@ -1,0 +1,31 @@
+.button {
+  max-width: 50px;
+  max-height: 50px;
+  padding: 10px;
+
+  background-color: #801336;
+  box-shadow: 0 6px #801336, 0 8px #2d132c;
+  transition: transform 0.2s linear, box-shadow 0.2s linear;
+
+  border: 2px solid #2d132c;
+  border-radius: 8px;
+
+  color: #fff;
+  font-size: 30px;
+  text-decoration: none;
+
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0 auto;
+}
+
+.button:active {
+  transform: translateY(8px);
+  box-shadow: 0 0 #a11944, 0 0 #801336;
+}
+
+.button:focus {
+  outline: none;
+}
