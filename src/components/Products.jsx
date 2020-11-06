@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link, Router } from "react-router-dom";
 import { FaCartPlus } from "react-icons/fa";
 
 const FUN = "Fun";
@@ -7,22 +8,26 @@ const ADVENTURE = "Adventure";
 function Products({ setCart, cart }) {
   const [products] = useState([
     {
-      category: ADVENTURE,
+      // category: ADVENTURE,
       name: "Cyberpunk 2077",
       cost: 28.95,
       image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co1rft.jpg",
+      link: "https://www.cyberpunk.net/us/en/pre-order",
     },
     {
-      category: FUN,
+      // category: FUN,
       name: "Fall Guys",
       cost: 28.95,
       image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co2fq7.jpg",
+      link:
+        "https://store.steampowered.com/app/1097150/Fall_Guys_Ultimate_Knockout/",
     },
     {
-      category: FUN,
+      // category: FUN,
       name: "Among Us",
       cost: 28.95,
       image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co1uaf.jpg",
+      link: "https://store.steampowered.com/app/945360/Among_Us/",
     },
   ]);
   const addToCart = (product) => {
@@ -52,12 +57,24 @@ function Products({ setCart, cart }) {
               <h2>{product.name}</h2>
               <div className="space3"></div>
               <img src={product.image} alt="Product Image" />
+              <div className="space"></div>
+              <div className="buy">
+                <button
+                  onClick={() => (window.location.href = products[0].link)}
+                >
+                  CodePen
+                </button>
+                {/* <p onClick={products.link}>buy</p>
+                <button onClick="">Buy</button> */}
+              </div>
               <h4>${product.cost}</h4>
               <div className="cart-container">
                 <div className="space2"></div>
-                <a className="cart" onClick={() => addToCart(product)}>
-                  <FaCartPlus />
-                </a>
+                <div className="anotheridk">
+                  <a className="cart" onClick={() => addToCart(product)}>
+                    <FaCartPlus />
+                  </a>
+                </div>
               </div>
             </li>
           ))}

@@ -3,7 +3,7 @@
   margin-right: 5px;
 }
 
-.idk button {
+.this button {
   background: #c72c41;
   cursor: pointer;
   border: none;
@@ -13,12 +13,15 @@
   font-size: 20px;
 }
 
-.total button {
-  background: #801336;
+.thiscard button {
+  background: #2d132c;
   cursor: pointer;
   border: none;
   color: white;
   padding: 7px;
   border-radius: 5px;
   font-size: 20px;
+  width: 80px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
