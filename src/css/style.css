@@ -21,28 +21,41 @@ body {
   justify-content: center;
 }
 
+img {
+  border-radius: 5px;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
 input {
   height: 50px;
-  width: 200px;
+  width: 500px;
   padding: 5px;
   border: none;
   border-radius: 5px;
   color: #000000;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 ::placeholder {
   color: #000000;
   opacity: 1;
-  font-size: 20px;
+  font-size: 25px;
+  padding: 5px;
 }
 
 :-ms-input-placeholder {
   color: #000000;
+  font-size: 25px;
+  padding: 5px;
 }
 
 ::-ms-input-placeholder {
   color: #000000;
+  font-size: 25px;
+  padding: 5px;
 }
 
 .searchbar {

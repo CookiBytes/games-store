@@ -1,3 +1,4 @@
+/* Cart */
 .cart {
   margin: 0 auto;
   border-radius: 5px;
@@ -15,9 +16,10 @@
   justify-content: center;
 }
 
+/* Cart 2 */
 .cart-button {
   margin: 0 auto;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -33,6 +35,16 @@
   text-align: center;
   align-items: center;
   float: right;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   justify-content: center;
+}
+
+.border-left {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.border-right {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }

@@ -1,122 +1,62 @@
-import React from "react";
-import { FaCartPlus, FaShoppingCart } from "react-icons/fa";
+import React, { useState } from "react";
+import Cart from "./components/Cart";
+import Products from "./components/Products";
+import { FaShoppingCart, FaHome } from "react-icons/fa";
 import "./css/style.css";
+import "./css/icons.css";
 import "./css/button.css";
 import "./css/spaces.css";
 import "./css/products.css";
-import "./css/cart-btn-container.css";
+
+const PAGE_PRODUCTS = "products";
+const PAGE_CART = "cart";
 
 function App() {
+  const [cart, setCart] = useState([]);
+  const [page, setPage] = useState(PAGE_PRODUCTS);
+  const navigateTo = (nextPage) => {
+    setPage(nextPage);
+  };
+  const getCartTotal = () => {
+    return cart.reduce((sum, { quantity }) => sum + quantity, 0);
+  };
+
   return (
     <React.Fragment>
-      <div className="wrapper">
-        {/* Search */}
-        <a href="#search" className="searchbar">
-          <input type="text" placeholder="Search..."></input>
-        </a>
-
+      <div className="navbar">
         {/* Cart */}
-        <div className="cart-container2">
+        <div className="cart-container2 border-right">
           <div className="space2"></div>
-          <a href="#cart" className="cart-button">
+          <a
+            className="cart-button border-right"
+            onClick={() => navigateTo(PAGE_CART)}
+          >
             <FaShoppingCart size="30" />
           </a>
         </div>
 
-        {/* Title */}
-        <h1>Cards</h1>
+        {/* Home */}
+        <div className="cart-container2 border-left">
+          <div className="space2"></div>
+          <a
+            className="cart-button border-left"
+            onClick={() => navigateTo(PAGE_PRODUCTS)}
+          >
+            <FaHome size="30" />
+          </a>
+        </div>
 
-        <ul className="flex cards">
-          {/* Card 1 */}
-          <li>
-            <h2>Bull</h2>
-            <p>
-              Posuere varius ullamcorper ipsum adipiscing dignissim ipsum
-              adipiscing a a quisque malesuada quam purus venenatis sagittis
-              fermentum parturient curabitur montes a metus.
-            </p>
+        {/* Grid */}
+        <div className="wrapper">
+          {/* Search */}
+          <a href="#search">
+            <input type="text" placeholder="Search..."></input>
+          </a>
 
-            {/* Cart Button */}
-            <div className="cart-container">
-              <div className="space2"></div>
-              <a href="" className="cart">
-                <FaCartPlus />
-              </a>
-            </div>
-          </li>
-
-          {/* Card 2 */}
-          <li>
-            <h2>Elephant</h2>
-            <p>
-              Posuere varius ullamcorper ipsum adipiscing dignissim ipsum
-              adipiscing a a quisque malesuada quam purus venenatis sagittis
-              fermentum parturient curabitur montes a metus.
-            </p>
-
-            {/* Cart Button */}
-            <div className="cart-container">
-              <div className="space2"></div>
-              <a href="" className="cart">
-                <FaCartPlus />
-              </a>
-            </div>
-          </li>
-
-          {/* Card 3 */}
-          <li>
-            <h2>Tiger</h2>
-            <p>
-              Posuere varius ullamcorper ipsum adipiscing dignissim ipsum
-              adipiscing a a quisque malesuada quam purus venenatis sagittis
-              fermentum parturient curabitur montes a metus.
-            </p>
-
-            {/* Cart Button */}
-            <div className="cart-container">
-              <div className="space2"></div>
-              <a href="" className="cart">
-                <FaCartPlus />
-              </a>
-            </div>
-          </li>
-
-          {/* Card 4 */}
-          <li>
-            <h2>Gazelle</h2>
-            <p>
-              Posuere varius ullamcorper ipsum adipiscing dignissim ipsum
-              adipiscing a a quisque malesuada quam purus venenatis sagittis
-              fermentum parturient curabitur montes a metus.
-            </p>
-
-            {/* Cart Button */}
-            <div className="cart-container">
-              <div className="space2"></div>
-              <a href="" className="cart">
-                <FaCartPlus />
-              </a>
-            </div>
-          </li>
-
-          {/* Card 5 */}
-          <li>
-            <h2>Monkey</h2>
-            <p>
-              Posuere varius ullamcorper ipsum adipiscing dignissim ipsum
-              adipiscing a a quisque malesuada quam purus venenatis sagittis
-              fermentum parturient curabitur montes a metus.
-            </p>
-
-            {/* Cart Button */}
-            <div className="cart-container">
-              <div className="space2"></div>
-              <a href="" className="cart">
-                <FaCartPlus />
-              </a>
-            </div>
-          </li>
-        </ul>
+          {/* Display */}
+          {page === PAGE_PRODUCTS && <Products cart={cart} setCart={setCart} />}
+          {page === PAGE_CART && <Cart cart={cart} setCart={setCart} />}
+        </div>
       </div>
     </React.Fragment>
   );
