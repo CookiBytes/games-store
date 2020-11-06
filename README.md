@@ -9,7 +9,7 @@ And when you click on the product card, it would lead you to their Steam (or Itc
 # Credits
 
 Part | By | Link
------------- | -------------
+------------ | ------------- | -------------
 Images | IGDB | [Homepage](https://www.igdb.com/discover)
 Palette | ColorHunt | [Palette](https://colorhunt.co/palette/163991)
 Rows & Columns | CodePen | [Pen](https://codepen.io/rachelandrew/pen/YqqdXL)
