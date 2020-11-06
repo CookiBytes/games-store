@@ -5,6 +5,7 @@
   text-align: center;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
   color: white;
 }
 
@@ -24,6 +25,7 @@
   align-items: center;
   justify-content: center;
   color: white;
+  cursor: pointer;
   padding: 5px;
 }
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Cart from "./components/Cart";
-import Products from "./components/Products";
+import Products from "./Products";
 import { FaShoppingCart, FaHome } from "react-icons/fa";
 import "./css/style.css";
 import "./css/icons.css";
@@ -49,7 +49,7 @@ function App() {
         {/* Grid */}
         <div className="wrapper">
           {/* Search */}
-          <a href="#search">
+          <a href="">
             <input type="text" placeholder="Search..."></input>
           </a>
 
