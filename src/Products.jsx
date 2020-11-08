@@ -3,6 +3,8 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { FaCartPlus } from "react-icons/fa";
 
+toast.configure();
+
 // const FUN = "Fun";
 // const ADVENTURE = "Adventure";
 // const PUZZLES = "Puzzles";
@@ -11,7 +13,7 @@ function Products({ setCart, cart }) {
   const [products] = useState([
     {
       // category: ADVENTURE,
-      name: "Cyberpunk 2077",
+      name: "CyberPunk 2077",
       cost: null,
       image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co1rft.jpg",
       link: "https://www.cyberpunk.net/us/en/pre-order",
@@ -69,7 +71,7 @@ function Products({ setCart, cart }) {
     }
 
     setCart(newCart);
-    toast("A new game has been added to your cart");
+    toast(`${product.name} has been added to cart`);
   };
 
   return (

@@ -1,5 +1,9 @@
 import React from "react";
+import { toast } from "react-toastify";
 import { FaMinus } from "react-icons/fa";
+import "react-toastify/dist/ReactToastify.css";
+
+toast.configure();
 
 function Cart({ cart, setCart }) {
   const getTotalSum = () => {
@@ -15,6 +19,7 @@ function Cart({ cart, setCart }) {
   };
   const removeFromCart = (productToRemove) => {
     setCart(cart.filter((product) => product !== productToRemove));
+    toast(`${productToRemove.name} has been removed from cart`);
   };
 
   return (

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Cart from "./components/Cart";
+import Cart from "./Cart";
 import Products from "./Products";
 import { FaShoppingCart, FaHome } from "react-icons/fa";
 import "./css/style.css";
