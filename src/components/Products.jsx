@@ -13,7 +13,7 @@ function Products({ setCart, cart }) {
   const [products] = useState([
     {
       // category: ADVENTURE,
-      name: "CyberPunk 2077",
+      name: "Cyber Punk 2077",
       cost: null,
       image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co1rft.jpg",
       link: "https://www.cyberpunk.net/us/en/pre-order",
@@ -55,6 +55,20 @@ function Products({ setCart, cart }) {
       link:
         "https://store.steampowered.com/app/252950/Rocket_League/?curator_clanid=11855704",
     },
+    {
+      // category: FUN,
+      name: "The Falconeer",
+      cost: null,
+      image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co2e3l.jpg",
+      link: "https://store.steampowered.com/app/1135260/The_Falconeer/",
+    },
+    {
+      // category: FUN,
+      name: "Genshin Impact",
+      cost: null,
+      image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co1ltz.jpg",
+      link: "https://genshin.mihoyo.com/en",
+    },
   ]);
   const addToCart = (product) => {
     let newCart = [...cart];
@@ -71,7 +85,9 @@ function Products({ setCart, cart }) {
     }
 
     setCart(newCart);
-    toast(`${product.name} has been added to cart`);
+    toast.success(`${product.name} has been added to cart`, {
+      autoClose: 1110,
+    });
   };
 
   return (
