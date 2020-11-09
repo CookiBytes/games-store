@@ -34,7 +34,12 @@ function Cart({ cart, setCart }) {
           <p>Total Cost: ${getTotalSum()}</p>
         </div>
       )}
-      {cart.length <= 0 && <h1>There are no games in cart.</h1>}
+      {cart.length <= 0 && (
+        <div>
+          <h1>There are no games in cart.</h1>
+          <p>Click the home icon on the right to view games.</p>
+        </div>
+      )}
 
       {/* Cards */}
       <div className="idk">
