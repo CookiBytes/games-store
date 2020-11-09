@@ -1,0 +1,32 @@
+input {
+  height: 50px;
+  width: 500px;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  color: #000000;
+  font-size: 25px;
+}
+
+::placeholder {
+  color: #000000;
+  opacity: 1;
+  font-size: 25px;
+  padding: 5px;
+}
+
+:-ms-input-placeholder {
+  color: #000000;
+  font-size: 25px;
+  padding: 5px;
+}
+
+::-ms-input-placeholder {
+  color: #000000;
+  font-size: 25px;
+  padding: 5px;
+}
+
+.searchbar {
+  float: left;
+}

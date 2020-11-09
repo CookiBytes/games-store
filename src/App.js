@@ -1,14 +1,17 @@
 import React, { useState } from "react";
 import Cart from "./components/Cart";
-import Products from "./components/Products";
+import AllProducts from "./components/Products";
 import { FaShoppingCart, FaHome } from "react-icons/fa";
 import "./css/style.css";
 import "./css/icons.css";
+import "./css/search.css";
+import "./css/select.css";
 import "./css/button.css";
 import "./css/spaces.css";
 import "./css/products.css";
 
 const PAGE_PRODUCTS = "products";
+const PAGE_FILTERED = "filtered";
 const PAGE_CART = "cart";
 
 // class App extends React.Component() {
@@ -59,7 +62,9 @@ function App() {
           ></input>
 
           {/* Display */}
-          {page === PAGE_PRODUCTS && <Products cart={cart} setCart={setCart} />}
+          {page === PAGE_PRODUCTS && (
+            <AllProducts cart={cart} setCart={setCart} />
+          )}
           {page === PAGE_CART && <Cart cart={cart} setCart={setCart} />}
         </div>
       </div>
