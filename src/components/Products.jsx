@@ -92,7 +92,7 @@ function Products({ setCart, cart }) {
 
   return (
     <>
-      <h1>Home</h1>
+      <h1>All Games</h1>
       <div className="idk">
         <ul className="flex cards">
           {products.map((product, index) => (

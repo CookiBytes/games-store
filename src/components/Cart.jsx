@@ -31,9 +31,10 @@ function Cart({ cart, setCart }) {
       {cart.length > 0 && (
         <div className="this">
           <button onClick={clearCart}>Clear Cart</button>
+          <p>Total Cost: ${getTotalSum()}</p>
         </div>
       )}
-      <p>Total Cost: ${getTotalSum()}</p>
+      {cart.length <= 0 && <h1>There are no games in cart.</h1>}
 
       {/* Cards */}
       <div className="idk">
