@@ -27,21 +27,24 @@ function Cart({ cart, setCart }) {
   return (
     <>
       {/* Clear Cart and Total Cost */}
-      <div className="space"></div>
-      {cart.length > 0 && (
-        <div className="this">
-          <button onClick={clearCart}>Clear Cart</button>
-          <p>Total Cost: ${getTotalSum()}</p>
-        </div>
-      )}
-      {cart.length <= 0 && (
-        <div>
-          <h1>There are no games in cart.</h1>
-        </div>
-      )}
+      <div className="clear-cart-total-cost">
+        <div className="space"></div>
+        {cart.length > 0 && (
+          <div className="this">
+            <button onClick={clearCart}>Clear Cart</button>
+            <p>Total Cost: ${getTotalSum()}</p>
+          </div>
+        )}
+
+        {cart.length <= 0 && (
+          <div>
+            <h1>There are no games in cart.</h1>
+          </div>
+        )}
+      </div>
 
       {/* Cards */}
-      <div className="idk">
+      <div className="cart-products">
         <ul className="flex cards">
           {cart.map((product, index) => (
             <li key={index}>
@@ -49,10 +52,6 @@ function Cart({ cart, setCart }) {
               <div className="space3"></div>
               <img src={product.image} alt={product.name} />
               <h4>${product.cost}</h4>
-              {/* <input
-                value={product.quantity}
-                onChange={(e) => setQuantity(product, parseInt(e.target.value))}
-              /> */}
               <div className="space3"></div>
               <div className="cart-container">
                 <div className="space2"></div>

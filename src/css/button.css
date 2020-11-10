@@ -1,7 +1,7 @@
-.idk-total-container {
+/* .idk-total-container {
   display: inline-block;
   margin-right: 5px;
-}
+} */
 
 .this button {
   background: #c72c41;
@@ -13,7 +13,7 @@
   font-size: 20px;
 }
 
-.thiscard button {
+.buy-product button {
   background: #2d132c;
   cursor: pointer;
   border: none;

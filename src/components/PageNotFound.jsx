@@ -3,7 +3,7 @@ import React from "react";
 function NotFoundPage() {
   return (
     <React.Fragment>
-      <div className="pnf">
+      <div className="page-not-found">
         <div class="container">
           <div class="content">
             <h2>404</h2>

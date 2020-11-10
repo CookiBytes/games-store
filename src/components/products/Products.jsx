@@ -79,11 +79,11 @@ function Products({ setCart, cart }) {
   };
 
   return (
-    <>
+    <div className="products">
       <h1 className="big-text">Games</h1>
 
       {/* Cards */}
-      <div className="idk">
+      <div className="products">
         <ul className="flex cards">
           {products.map((product, index) => (
             <li key={index}>
@@ -91,7 +91,7 @@ function Products({ setCart, cart }) {
               <div className="space3"></div>
               <img src={product.image} alt={product.name} />
               <div className="space"></div>
-              <div className="thiscard">
+              <div className="buy-product">
                 <button onClick={() => (window.location.href = product.link)}>
                   Buy
                 </button>
@@ -99,7 +99,7 @@ function Products({ setCart, cart }) {
               <h4>${product.cost}</h4>
               <div className="cart-container">
                 <div className="space2"></div>
-                <div className="anotheridk">
+                <div className="product-icon">
                   <a className="cart" onClick={() => addToCart(product)}>
                     <FaCartPlus />
                   </a>
@@ -109,7 +109,7 @@ function Products({ setCart, cart }) {
           ))}
         </ul>
       </div>
-    </>
+    </div>
   );
 }
 

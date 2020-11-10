@@ -114,7 +114,7 @@ function Filtered({ setCart, cart }) {
       </div>
 
       {/* Cards */}
-      <div className="idk">
+      <div className="filtered-products">
         <ul className="flex cards">
           {getProductsInCategory().map((product, index) => (
             <li key={index}>
@@ -122,7 +122,7 @@ function Filtered({ setCart, cart }) {
               <div className="space3"></div>
               <img src={product.image} alt={product.name} />
               <div className="space"></div>
-              <div className="thiscard">
+              <div className="buy-product">
                 <button onClick={() => (window.location.href = product.link)}>
                   Buy
                 </button>
@@ -130,7 +130,7 @@ function Filtered({ setCart, cart }) {
               <h4>${product.cost}</h4>
               <div className="cart-container">
                 <div className="space2"></div>
-                <div className="anotheridk">
+                <div className="product-icon">
                   <a className="cart" onClick={() => addToCart(product)}>
                     <FaCartPlus />
                   </a>
