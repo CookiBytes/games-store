@@ -7,15 +7,10 @@ toast.configure();
 
 function Cart({ cart, setCart }) {
   const getTotalSum = () => {
-    return cart.reduce((sum, { cost, quantity }) => sum + cost * quantity, 0);
+    return cart.reduce((sum, { cost }) => sum + cost, 0);
   };
   const clearCart = () => {
     setCart([]);
-  };
-  const setQuantity = (product, amount) => {
-    const newCart = [...cart];
-    newCart.find((item) => item.name === product.name).quantity = amount;
-    setCart(newCart);
   };
   const removeFromCart = (productToRemove) => {
     setCart(cart.filter((product) => product !== productToRemove));
