@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Cart from "./components/Cart";
-import AllProducts from "./components/Products";
-import { FaShoppingCart, FaHome } from "react-icons/fa";
+import Filtered from "./components/Filtered";
+import Products from "./components/Products";
+import { FaShoppingCart, FaHome, FaFilter } from "react-icons/fa";
 import "./css/style.css";
 import "./css/icons.css";
 import "./css/search.css";
@@ -41,6 +42,17 @@ function App() {
           </a>
         </div>
 
+        {/* Filter */}
+        <div className="cart-container2 border-none">
+          <div className="space2"></div>
+          <a
+            className="cart-button border-left"
+            onClick={() => navigateTo(PAGE_FILTERED)}
+          >
+            <FaFilter size="30" />
+          </a>
+        </div>
+
         {/* Home */}
         <div className="cart-container2 border-left">
           <div className="space2"></div>
@@ -62,9 +74,8 @@ function App() {
           ></input>
 
           {/* Display */}
-          {page === PAGE_PRODUCTS && (
-            <AllProducts cart={cart} setCart={setCart} />
-          )}
+          {page === PAGE_PRODUCTS && <Products cart={cart} setCart={setCart} />}
+          {page === PAGE_FILTERED && <Filtered cart={cart} setCart={setCart} />}
           {page === PAGE_CART && <Cart cart={cart} setCart={setCart} />}
         </div>
       </div>

@@ -37,7 +37,6 @@ function Cart({ cart, setCart }) {
       {cart.length <= 0 && (
         <div>
           <h1>There are no games in cart.</h1>
-          <p>Click the home icon on the right to view games.</p>
         </div>
       )}
 

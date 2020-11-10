@@ -5,15 +5,21 @@ import { FaCartPlus } from "react-icons/fa";
 
 toast.configure();
 
-function Products({ setCart, cart }) {
+const FUN = "Fun";
+const ADVENTURE = "Adventure";
+const MULTIPLAYER = "Multiplayer";
+
+function Filtered({ setCart, cart }) {
   const [products] = useState([
     {
+      category: MULTIPLAYER,
       name: "Cyber Punk 2077",
       cost: null,
       image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co1rft.jpg",
       link: "https://www.cyberpunk.net/us/en/pre-order",
     },
     {
+      category: FUN,
       name: "Fall Guys",
       cost: 28.95,
       image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co2fq7.jpg",
@@ -21,24 +27,28 @@ function Products({ setCart, cart }) {
         "https://store.steampowered.com/app/1097150/Fall_Guys_Ultimate_Knockout/",
     },
     {
+      category: FUN,
       name: "Among Us",
       cost: 7.5,
       image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co1uaf.jpg",
       link: "https://store.steampowered.com/app/945360/Among_Us/",
     },
     {
+      category: ADVENTURE,
       name: "A Monster's Expedition",
       cost: 28.95,
       image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co2eop.jpg",
       link: "https://store.steampowered.com/app/1052990/A_Monsters_Expedition/",
     },
     {
+      category: ADVENTURE,
       name: "Halo Infinite",
       cost: null,
       image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co2dto.jpg",
       link: "https://store.steampowered.com/app/1240440/Halo_Infinite/",
     },
     {
+      category: FUN,
       name: "Rocket League",
       cost: null,
       image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co2hnd.jpg",
@@ -46,12 +56,14 @@ function Products({ setCart, cart }) {
         "https://store.steampowered.com/app/252950/Rocket_League/?curator_clanid=11855704",
     },
     {
+      category: ADVENTURE,
       name: "The Falconeer",
       cost: null,
       image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co2e3l.jpg",
       link: "https://store.steampowered.com/app/1135260/The_Falconeer/",
     },
     {
+      category: MULTIPLAYER,
       name: "Genshin Impact",
       cost: null,
       image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co1ltz.jpg",
@@ -77,15 +89,34 @@ function Products({ setCart, cart }) {
       autoClose: 1110,
     });
   };
+  const [category, setCategory] = useState(FUN);
+  const getProductsInCategory = () => {
+    return products.filter((product) => product.category === category);
+  };
 
   return (
     <>
-      <h1 className="big-text">all games</h1>
+      <h1 className="big-text">games</h1>
+
+      {/* Filter */}
+      <div className="select-container">
+        <div class="select">
+          <select
+            name="slct"
+            id="slct"
+            onChange={(event) => setCategory(event.target.value)}
+          >
+            <option value={FUN}>{FUN}</option>
+            <option value={ADVENTURE}>{ADVENTURE}</option>
+            <option value={MULTIPLAYER}>{MULTIPLAYER}</option>
+          </select>
+        </div>
+      </div>
 
       {/* Cards */}
       <div className="idk">
         <ul className="flex cards">
-          {products.map((product, index) => (
+          {getProductsInCategory().map((product, index) => (
             <li key={index}>
               <h2>{product.name}</h2>
               <div className="space3"></div>
@@ -113,4 +144,4 @@ function Products({ setCart, cart }) {
   );
 }
 
-export default Products;
+export default Filtered;
