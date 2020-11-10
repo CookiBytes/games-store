@@ -63,7 +63,6 @@ function Products({ setCart, cart }) {
     let itemInCart = newCart.find((item) => product.name === item.name);
 
     if (itemInCart) {
-      // itemInCart.quantity++;
       toast.error(`${product.name} is already in cart`, {
         autoClose: 1300,
       });

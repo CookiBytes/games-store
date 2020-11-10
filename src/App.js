@@ -8,6 +8,7 @@ import "./css/search.css";
 import "./css/select.css";
 import "./css/button.css";
 import "./css/spaces.css";
+import "./css/footer.css";
 import "./css/products.css";
 import "./css/pagenotfound.css";
 

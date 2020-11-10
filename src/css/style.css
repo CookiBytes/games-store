@@ -41,6 +41,12 @@ p {
   font-weight: 150;
 }
 
+a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 img {
   border-radius: 5px;
 }

@@ -14,9 +14,10 @@ function Home() {
   const navigateTo = (nextPage) => {
     setPage(nextPage);
   };
-  const getCartTotal = () => {
-    return cart.reduce((sum, { quantity }) => sum + quantity, 0);
-  };
+
+  // const getCartTotal = () => {
+  //   return cart.reduce((sum, { quantity }) => sum + quantity, 0);
+  // };
 
   return (
     <React.Fragment>
@@ -52,7 +53,9 @@ function Home() {
             <div className="space2"></div>
             <a
               className="cart-button border-left"
-              onClick={() => navigateTo(PAGE_PRODUCTS)}
+              onClick={() => {
+                navigateTo(PAGE_PRODUCTS);
+              }}
             >
               <FaHome size="30" />
             </a>
@@ -73,6 +76,15 @@ function Home() {
           {page === PAGE_FILTERED && <Filtered cart={cart} setCart={setCart} />}
           {page === PAGE_CART && <Cart cart={cart} setCart={setCart} />}
         </div>
+
+        <div className="space4"></div>
+
+        {/* Footer */}
+        <footer>
+          <p>
+            Made by <a href="https://github.com/CookiBytes">CookiBytes</a>
+          </p>
+        </footer>
       </div>
     </React.Fragment>
   );
