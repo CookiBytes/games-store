@@ -32,7 +32,7 @@ function Cart({ cart, setCart }) {
         )}
 
         {cart.length <= 0 && (
-          <div>
+          <div className="footer-content">
             <h1>There are no games in cart.</h1>
           </div>
         )}

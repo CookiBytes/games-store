@@ -6,3 +6,7 @@ footer {
 footer a {
   text-decoration: line-through;
 }
+
+.footer-content {
+  min-height: calc(100vh - 70px);
+}
