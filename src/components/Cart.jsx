@@ -25,7 +25,7 @@ function Cart({ cart, setCart }) {
       <div className="clear-cart-total-cost">
         <div className="space"></div>
         {cart.length > 0 && (
-          <div className="this">
+          <div className="clear-cart-btn">
             <button onClick={clearCart}>Clear Cart</button>
             <p>Total Cost: ${getTotalSum()}</p>
           </div>

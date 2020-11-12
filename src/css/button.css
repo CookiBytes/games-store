@@ -1,9 +1,4 @@
-/* .idk-total-container {
-  display: inline-block;
-  margin-right: 5px;
-} */
-
-.this button {
+.clear-cart-btn button {
   background: #c72c41;
   cursor: pointer;
   border: none;

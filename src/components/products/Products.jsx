@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { FaCartPlus } from "react-icons/fa";
@@ -6,7 +6,7 @@ import { FaCartPlus } from "react-icons/fa";
 toast.configure();
 
 function Products({ setCart, cart }) {
-  const [products] = useState([
+  const [products, setProducts] = useState([
     {
       name: "Cyber Punk 2077",
       cost: null,
@@ -81,6 +81,22 @@ function Products({ setCart, cart }) {
 
     setCart(newCart);
   };
+
+  const saveLocalProducts = () => {
+    localStorage.setItem("products", JSON.stringify(products));
+  };
+  const getLocalProducts = () => {
+    if (localStorage.getItem("products") === null) {
+      localStorage.setItem("products", JSON.stringify([]));
+    } else {
+      let productLocal = JSON.parse(localStorage.getItem("games"));
+      setProducts(productLocal);
+    }
+  };
+  useEffect(() => {
+    getLocalProducts();
+    saveLocalProducts();
+  }, []);
 
   return (
     <div className="products">

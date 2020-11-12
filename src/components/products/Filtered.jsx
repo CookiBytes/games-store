@@ -75,19 +75,23 @@ function Filtered({ setCart, cart }) {
     let itemInCart = newCart.find((item) => product.name === item.name);
 
     if (itemInCart) {
-      itemInCart.quantity++;
+      toast.error(`${product.name} is already in cart`, {
+        autoClose: 1300,
+      });
     } else {
       itemInCart = {
         ...product,
         quantity: 1,
       };
+
+      toast.success(`${product.name} has been added to cart`, {
+        autoClose: 1200,
+      });
+
       newCart.push(itemInCart);
     }
 
     setCart(newCart);
-    toast.success(`${product.name} has been added to cart`, {
-      autoClose: 1110,
-    });
   };
   const [category, setCategory] = useState(FUN);
   const getProductsInCategory = () => {
