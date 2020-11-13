@@ -81,13 +81,14 @@ function Products({ setCart, cart }) {
 
     setCart(newCart);
   };
+  const item = useState([]);
 
   const saveLocalProducts = () => {
-    localStorage.setItem("products", JSON.stringify(products));
+    localStorage.setItem("games", JSON.stringify(item));
   };
   const getLocalProducts = () => {
-    if (localStorage.getItem("products") === null) {
-      localStorage.setItem("products", JSON.stringify([]));
+    if (localStorage.getItem("games") === null) {
+      localStorage.setItem("games", JSON.stringify([]));
     } else {
       let productLocal = JSON.parse(localStorage.getItem("games"));
       setProducts(productLocal);
@@ -97,38 +98,44 @@ function Products({ setCart, cart }) {
     getLocalProducts();
     saveLocalProducts();
   }, []);
+  let itemsToRender;
 
+  if (item) {
+    itemsToRender = item.map((item) => {
+      return (
+        <div className="products" key={item.id}>
+          <ul className="flex cards">
+            {products.map((product, index) => (
+              <li key={index}>
+                <h2>{product.name}</h2>
+                <div className="space3"></div>
+                <img src={product.image} alt={product.name} />
+                <div className="space"></div>
+                <div className="buy-product">
+                  <button onClick={() => (window.location.href = product.link)}>
+                    Buy
+                  </button>
+                </div>
+                <h4>${product.cost}</h4>
+                <div className="cart-container">
+                  <div className="space2"></div>
+                  <div className="product-icon">
+                    <a className="cart" onClick={() => addToCart(product)}>
+                      <FaCartPlus />
+                    </a>
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      );
+    });
+  }
   return (
     <div className="products">
       <h1 className="big-text">Games</h1>
-
-      {/* Cards */}
-      <div className="products">
-        <ul className="flex cards">
-          {products.map((product, index) => (
-            <li key={index}>
-              <h2>{product.name}</h2>
-              <div className="space3"></div>
-              <img src={product.image} alt={product.name} />
-              <div className="space"></div>
-              <div className="buy-product">
-                <button onClick={() => (window.location.href = product.link)}>
-                  Buy
-                </button>
-              </div>
-              <h4>${product.cost}</h4>
-              <div className="cart-container">
-                <div className="space2"></div>
-                <div className="product-icon">
-                  <a className="cart" onClick={() => addToCart(product)}>
-                    <FaCartPlus />
-                  </a>
-                </div>
-              </div>
-            </li>
-          ))}
-        </ul>
-      </div>
+      <div>{itemsToRender}</div>
     </div>
   );
 }
