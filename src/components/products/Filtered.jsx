@@ -104,7 +104,7 @@ function Filtered({ setCart, cart }) {
 
       {/* Filter */}
       <div className="select-container">
-        <div class="select">
+        <div className="select">
           <select
             name="slct"
             id="slct"
