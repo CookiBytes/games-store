@@ -61,5 +61,4 @@ function Cart({ cart, setCart }) {
     </>
   );
 }
-
 export default Cart;

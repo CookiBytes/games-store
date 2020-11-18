@@ -8,10 +8,10 @@ toast.configure();
 function Products({ setCart, cart }) {
   const [products] = useState([
     {
-      name: "Cyber Punk 2077",
-      cost: null,
-      image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co1rft.jpg",
-      link: "https://www.cyberpunk.net/us/en/pre-order",
+      name: "Untitled Goose Game",
+      cost: 28.95,
+      image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co1vqc.jpg",
+      link: "https://store.steampowered.com/app/837470/Untitled_Goose_Game/",
     },
     {
       name: "Fall Guys",
@@ -33,29 +33,29 @@ function Products({ setCart, cart }) {
       link: "https://store.steampowered.com/app/1052990/A_Monsters_Expedition/",
     },
     {
-      name: "Halo Infinite",
-      cost: null,
-      image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co2dto.jpg",
-      link: "https://store.steampowered.com/app/1240440/Halo_Infinite/",
+      name: "Beat Saber",
+      cost: 42.95,
+      image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co20ux.jpg",
+      link: "https://store.steampowered.com/app/620980/Beat_Saber/",
     },
     {
-      name: "Rocket League",
-      cost: null,
-      image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co2hnd.jpg",
+      name: "Cook, Serve, Delicous!",
+      cost: 28.95,
+      image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co1wbk.jpg",
       link:
-        "https://store.steampowered.com/app/252950/Rocket_League/?curator_clanid=11855704",
+        "https://store.steampowered.com/app/1000030/Cook_Serve_Delicious_3/",
     },
     {
-      name: "The Falconeer",
-      cost: null,
-      image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co2e3l.jpg",
-      link: "https://store.steampowered.com/app/1135260/The_Falconeer/",
+      name: "Squadrons",
+      cost: 49.95,
+      image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co29n2.jpg",
+      link: "https://store.steampowered.com/app/1222730/STAR_WARS_Squadrons/",
     },
     {
-      name: "Genshin Impact",
-      cost: null,
-      image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co1ltz.jpg",
-      link: "https://genshin.mihoyo.com/en",
+      name: "Craftopia",
+      cost: 35.95,
+      image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co28g1.jpg",
+      link: "https://store.steampowered.com/app/1307550/Craftopia/",
     },
   ]);
   const addToCart = (product) => {
