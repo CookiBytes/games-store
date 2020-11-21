@@ -1,4 +1,4 @@
-![Logo](public/logo.png)
+Made with React, by CookiBytes.
 
 # Credits
 
