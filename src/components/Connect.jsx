@@ -61,8 +61,8 @@ function Home() {
           {page === PAGE_CART && <Cart cart={cart} setCart={setCart} />}
           <div className="space4"></div>
         </div>
-
         {/* Footer */}
+        <div className="footer-content"></div>
         <footer>
           <p>
             Made by <a href="https://github.com/CookiBytes">CookiBytes</a>
