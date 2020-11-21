@@ -10,15 +10,19 @@
 }
 
 .cards li {
-  border: 2px solid #801336;
+  border: 2px solid #ffb485;
   border-radius: 5px;
-  background-color: #c72c41;
+  background-color: #e8e8e8;
   color: #fff;
   flex: 1 1 200px;
 }
 
+.price-colour {
+  color: black;
+}
+
 .cards h2 {
-  background-color: #801336;
+  background-color: #ffb485;
   margin: 0;
   padding: 10px;
 }

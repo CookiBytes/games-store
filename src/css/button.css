@@ -1,7 +1,8 @@
 .clear-cart-btn button {
-  background: #c72c41;
+  background: #ffb485;
   cursor: pointer;
   border: none;
+  margin: 0 auto;
   color: white;
   padding: 7px;
   border-radius: 5px;
@@ -9,7 +10,7 @@
 }
 
 .buy-product button {
-  background: #2d132c;
+  background: #ffb485;
   cursor: pointer;
   border: none;
   color: white;

@@ -1,6 +1,9 @@
 /*
-Palette - ColorHunt
-https://colorhunt.co/palette/163991
+Palette Ideas - ColorHunt
+https://colorhunt.co/palette/220248
+
+404 error Example #1 - CodePen
+https://codepen.io/ricardpriet/pen/MOKEam
 
 Rows & Columns - CodePen
 https://codepen.io/rachelandrew/pen/YqqdXL
@@ -17,8 +20,8 @@ https://codepen.io/raubaca/pen/VejpQP
 }
 
 body {
-  background-color: #2d132c;
-  color: #ffffff;
+  background-color: white;
+  color: black;
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -53,6 +56,20 @@ img {
   border-radius: 5px;
 }
 
+.letsgopadding {
+  padding: 10px;
+}
+
 .big-text {
   font-size: 2.8em;
+}
+
+::-moz-selection {
+  color: black;
+  background: #f0e395;
+}
+
+::selection {
+  color: black;
+  background: #f0e395;
 }

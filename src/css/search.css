@@ -3,14 +3,17 @@ input {
   width: 500px;
   padding: 5px;
   border: none;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 5px;
   color: #000000;
+  font-family: "Poppins", sans-serif;
   font-size: 25px;
 }
 
 ::placeholder {
   color: #000000;
   opacity: 1;
+  font-family: "Poppins", sans-serif;
   font-size: 25px;
   padding: 5px;
 }
@@ -19,6 +22,7 @@ input {
   color: #000000;
   font-size: 25px;
   padding: 5px;
+  font-family: "Poppins", sans-serif;
 }
 
 ::-ms-input-placeholder {
@@ -28,5 +32,6 @@ input {
 }
 
 .searchbar {
+  font-family: "Poppins", sans-serif;
   float: left;
 }

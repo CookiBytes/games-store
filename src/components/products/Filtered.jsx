@@ -34,10 +34,11 @@ function Filtered({ setCart, cart }) {
     },
     {
       category: ADVENTURE,
-      name: "A Monster's Expedition",
-      cost: 28.95,
-      image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co2eop.jpg",
-      link: "https://store.steampowered.com/app/1052990/A_Monsters_Expedition/",
+      name: "Solitaire Conspiracy",
+      cost: 16.95,
+      image: "https://images.igdb.com/igdb/image/upload/t_cover_big/co2gwv.jpg",
+      link:
+        "https://store.steampowered.com/app/1424980/The_Solitaire_Conspiracy/",
     },
     {
       category: FUN,
@@ -98,7 +99,7 @@ function Filtered({ setCart, cart }) {
   };
 
   return (
-    <>
+    <div className="letsgopadding">
       <h1 className="big-text">Filter</h1>
 
       {/* Filter */}
@@ -129,7 +130,9 @@ function Filtered({ setCart, cart }) {
                   Buy
                 </button>
               </div>
-              <h4>${product.cost}</h4>
+              <div className="price-colour">
+                <h4>${product.cost}</h4>
+              </div>
               <div className="cart-container">
                 <div className="space2"></div>
                 <div className="product-icon">
@@ -142,7 +145,7 @@ function Filtered({ setCart, cart }) {
           ))}
         </ul>
       </div>
-    </>
+    </div>
   );
 }
 export default Filtered;

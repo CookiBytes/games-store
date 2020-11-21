@@ -3,7 +3,7 @@ import React from "react";
 function NotFoundPage() {
   return (
     <React.Fragment>
-      <div className="page-not-found">
+      {/* <div className="page-not-found">
         <div class="container">
           <div class="content">
             <h2>404</h2>
@@ -15,7 +15,18 @@ function NotFoundPage() {
             <a href="/home">Back to Home</a>
           </div>
         </div>
-      </div>
+      </div> */}
+
+      <section className="error-container">
+        <span>
+          <span>4</span>
+        </span>
+        <span>0</span>
+        <span>
+          <span>4</span>
+        </span>
+        <a href="/">Home?</a>
+      </section>
     </React.Fragment>
   );
 }

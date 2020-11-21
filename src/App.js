@@ -1,9 +1,11 @@
 import React from "react";
-import Home from "./components/Home";
+import Home from "./components/Connect";
 import PageNotFound from "./components/PageNotFound.jsx";
 import { Route, Switch, BrowserRouter } from "react-router-dom";
+import "./css/home.css";
 import "./css/style.css";
 import "./css/icons.css";
+import "./css/navbar.css";
 import "./css/search.css";
 import "./css/select.css";
 import "./css/button.css";
@@ -17,7 +19,7 @@ function App() {
     <React.Fragment>
       <BrowserRouter>
         <Switch>
-          <Route exact path="/home" component={Home} />
+          <Route exact path="/" component={Home} />
           <Route path="*" component={PageNotFound} />
         </Switch>
       </BrowserRouter>
