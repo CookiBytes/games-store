@@ -1,9 +1,10 @@
-**Disclaimer:** This is just a demo web app.
+![Logo](public/logo.png)
 
 # Credits
 
 Part | By
 ------------ | -------------
-Palette | [ColorHunt](https://colorhunt.co/palette/163991)
+Palette Ideas | [ColorHunt](https://colorhunt.co/palette/220248)
 Rows & Columns | [Rachel Andrew](https://codepen.io/rachelandrew/pen/YqqdXL)
+404 Page | [Ricardo Prieto](https://codepen.io/ricardpriet/pen/MOKEam)
 Select | [Raúl Barrera](https://codepen.io/raubaca/pen/VejpQP)
