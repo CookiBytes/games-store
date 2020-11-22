@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/re-games/static/css/main.edfb83ff.chunk.css",
-    "main.js": "/re-games/static/js/main.147edd06.chunk.js",
-    "main.js.map": "/re-games/static/js/main.147edd06.chunk.js.map",
+    "main.js": "/re-games/static/js/main.31e8dd90.chunk.js",
+    "main.js.map": "/re-games/static/js/main.31e8dd90.chunk.js.map",
     "runtime-main.js": "/re-games/static/js/runtime-main.41295898.js",
     "runtime-main.js.map": "/re-games/static/js/runtime-main.41295898.js.map",
     "static/css/2.ccc6f86f.chunk.css": "/re-games/static/css/2.ccc6f86f.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.ccc6f86f.chunk.css",
     "static/js/2.f86d4451.chunk.js",
     "static/css/main.edfb83ff.chunk.css",
-    "static/js/main.147edd06.chunk.js"
+    "static/js/main.31e8dd90.chunk.js"
   ]
 }
