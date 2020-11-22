@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/re-games/static/css/main.edfb83ff.chunk.css",
+    "main.js": "/re-games/static/js/main.147edd06.chunk.js",
+    "main.js.map": "/re-games/static/js/main.147edd06.chunk.js.map",
+    "runtime-main.js": "/re-games/static/js/runtime-main.41295898.js",
+    "runtime-main.js.map": "/re-games/static/js/runtime-main.41295898.js.map",
+    "static/css/2.ccc6f86f.chunk.css": "/re-games/static/css/2.ccc6f86f.chunk.css",
+    "static/js/2.f86d4451.chunk.js": "/re-games/static/js/2.f86d4451.chunk.js",
+    "static/js/2.f86d4451.chunk.js.map": "/re-games/static/js/2.f86d4451.chunk.js.map",
+    "static/js/3.468aa07d.chunk.js": "/re-games/static/js/3.468aa07d.chunk.js",
+    "static/js/3.468aa07d.chunk.js.map": "/re-games/static/js/3.468aa07d.chunk.js.map",
+    "index.html": "/re-games/index.html",
+    "static/css/2.ccc6f86f.chunk.css.map": "/re-games/static/css/2.ccc6f86f.chunk.css.map",
+    "static/css/main.edfb83ff.chunk.css.map": "/re-games/static/css/main.edfb83ff.chunk.css.map",
+    "static/js/2.f86d4451.chunk.js.LICENSE.txt": "/re-games/static/js/2.f86d4451.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.41295898.js",
+    "static/css/2.ccc6f86f.chunk.css",
+    "static/js/2.f86d4451.chunk.js",
+    "static/css/main.edfb83ff.chunk.css",
+    "static/js/main.147edd06.chunk.js"
+  ]
+}
