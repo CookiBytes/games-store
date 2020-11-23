@@ -1,6 +1,6 @@
 import React from "react";
-import Home from "./components/Connect";
-import PageNotFound from "./components/PageNotFound.jsx";
+import Connect from "./components/Connect";
+import PageNotFound from "./components/pages/PageNotFound.jsx";
 import { Route, Switch, BrowserRouter } from "react-router-dom";
 import "./css/home.css";
 import "./css/style.css";
@@ -19,7 +19,7 @@ function App() {
     <React.Fragment>
       <BrowserRouter>
         <Switch>
-          <Route exact path="/" component={Home} />
+          <Route exact path="/home" component={Connect} />
           <Route path="*" component={PageNotFound} />
         </Switch>
       </BrowserRouter>

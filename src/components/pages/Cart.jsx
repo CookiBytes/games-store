@@ -22,7 +22,7 @@ function Cart({ cart, setCart }) {
   return (
     <React.Fragment>
       <div className="letsgopadding">
-        {/* Clear Cart and Total Cost */}
+        {/* Clear Cart, Total Cost */}
         <div className="clear-cart-total-cost">
           <div className="space"></div>
           {cart.length > 0 && (
@@ -66,4 +66,5 @@ function Cart({ cart, setCart }) {
     </React.Fragment>
   );
 }
+
 export default Cart;

@@ -1,15 +1,17 @@
 import React, { useState } from "react";
-import Cart from "./Cart";
-import Filtered from "./products/Filtered";
-import Products from "./products/Products";
+import Filtered from "./pages/Filtered";
+import Products from "./pages/Products";
+import Home from "./pages/Home";
+import Cart from "./pages/Cart";
 
 const PAGE_PRODUCTS = "products";
 const PAGE_FILTERED = "filtered";
 const PAGE_CART = "cart";
+const PAGE_HOME = "home";
 
-function Home() {
+function Connect() {
   const [cart, setCart] = useState([]);
-  const [page, setPage] = useState(PAGE_PRODUCTS);
+  const [page, setPage] = useState(PAGE_HOME);
   const navigateTo = (nextPage) => {
     setPage(nextPage);
   };
@@ -25,7 +27,7 @@ function Home() {
             <li>
               <a
                 onClick={() => {
-                  navigateTo();
+                  navigateTo(PAGE_HOME);
                 }}
               >
                 Home
@@ -54,13 +56,17 @@ function Home() {
             </li>
           </ul>
         </div>
+
+        {/* Display Pages */}
         <div className="letsgopadding">
-          {/* Stuff */}
+          {page === PAGE_HOME && <Home />}
           {page === PAGE_PRODUCTS && <Products cart={cart} setCart={setCart} />}
           {page === PAGE_FILTERED && <Filtered cart={cart} setCart={setCart} />}
           {page === PAGE_CART && <Cart cart={cart} setCart={setCart} />}
+
           <div className="space4"></div>
         </div>
+
         {/* Footer */}
         <div className="footer-content"></div>
         <footer>
@@ -73,4 +79,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Connect;
