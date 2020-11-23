@@ -68,6 +68,7 @@ function Connect() {
         </div>
 
         {/* Footer */}
+        <div className="space5"></div>
         <div className="footer-content"></div>
         <div className="all-centered">
           <footer>

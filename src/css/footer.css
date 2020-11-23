@@ -1,7 +1,15 @@
 footer {
-  padding: 10px;
+  /* padding: 20px;
   background-color: #d15c95;
   color: white;
+  flex-shrink: 0; */
+
+  position: fixed;
+  padding: 12px;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  background: #d15c95;
 }
 
 footer a {
@@ -9,5 +17,5 @@ footer a {
 }
 
 .footer-content {
-  min-height: calc(100vh - 70px);
+  flex: 1 0 auto;
 }

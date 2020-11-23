@@ -4,8 +4,8 @@ import logo from "../images/logo.png";
 function Home() {
   return (
     <React.Fragment>
-      <section class="section-a">
-        <div class="home-container">
+      <section className="section-a">
+        <div className="home-container">
           <div>
             <h1>Trending games, handpicked.</h1>
             <p>
@@ -22,7 +22,7 @@ function Home() {
               Re Games
             </button>
           </div>
-          <img src={logo} alt="Image" width="550" />
+          <img src={logo} alt="Logo" width="550" />
         </div>
       </section>
     </React.Fragment>

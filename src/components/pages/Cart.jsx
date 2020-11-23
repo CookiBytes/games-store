@@ -28,16 +28,18 @@ function Cart({ cart, setCart }) {
             <div className="space"></div>
             {cart.length > 0 && (
               <div className="clear-cart-btn">
+                <button onClick={clearCart}>Clear Cart</button>
                 <div className="space"></div>
-                {/* <button onClick={clearCart}>Clear Cart</button> */}
                 <p>Total Cost: ${getTotalSum()}</p>
               </div>
             )}
 
             {cart.length <= 0 && (
-              <div className="footer-content">
-                <h1>There are no games in cart.</h1>
-              </div>
+              <React.Fragment>
+                <div className="footer-content">
+                  <h1>There are no games in cart.</h1>
+                </div>
+              </React.Fragment>
             )}
           </div>
 
