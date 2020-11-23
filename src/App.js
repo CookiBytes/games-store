@@ -2,6 +2,8 @@ import React from "react";
 import Connect from "./components/Connect";
 import PageNotFound from "./components/pages/PageNotFound.jsx";
 import { Route, Switch, BrowserRouter } from "react-router-dom";
+
+// CSS
 import "./css/home.css";
 import "./css/style.css";
 import "./css/icons.css";
