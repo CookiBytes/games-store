@@ -84,39 +84,41 @@ function Products({ setCart, cart }) {
   };
 
   return (
-    <div className="letsgopadding">
-      <div className="wrapper">
-        <div className="products">
-          <h1 className="big-text">Games</h1>
+    <div className="all-centered">
+      <div className="letsgopadding">
+        <div className="wrapper">
           <div className="products">
-            <ul className="flex cards">
-              {products.map((product, index) => (
-                <li key={index}>
-                  <h2>{product.name}</h2>
-                  <div className="space3"></div>
-                  <img src={product.image} alt={product.name} />
-                  <div className="space"></div>
-                  <div className="buy-product">
-                    <button
-                      onClick={() => (window.location.href = product.link)}
-                    >
-                      Buy
-                    </button>
-                  </div>
-                  <div className="price-colour">
-                    <h4>${product.cost}</h4>
-                  </div>
-                  <div className="cart-container">
-                    <div className="space2"></div>
-                    <div className="product-icon">
-                      <a className="cart" onClick={() => addToCart(product)}>
-                        <FaCartPlus />
-                      </a>
+            <h1 className="big-text">Games</h1>
+            <div className="products">
+              <ul className="flex cards">
+                {products.map((product, index) => (
+                  <li key={index}>
+                    <h2>{product.name}</h2>
+                    <div className="space3"></div>
+                    <img src={product.image} alt={product.name} />
+                    <div className="space"></div>
+                    <div className="buy-product">
+                      <button
+                        onClick={() => (window.location.href = product.link)}
+                      >
+                        Buy
+                      </button>
                     </div>
-                  </div>
-                </li>
-              ))}
-            </ul>
+                    <div className="price-colour">
+                      <h4>${product.cost}</h4>
+                    </div>
+                    <div className="cart-container">
+                      <div className="space2"></div>
+                      <div className="product-icon">
+                        <a className="cart" onClick={() => addToCart(product)}>
+                          <FaCartPlus />
+                        </a>
+                      </div>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>

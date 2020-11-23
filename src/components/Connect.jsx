@@ -69,11 +69,13 @@ function Connect() {
 
         {/* Footer */}
         <div className="footer-content"></div>
-        <footer>
-          <p>
-            Made by <a href="https://github.com/CookiBytes">CookiBytes</a>
-          </p>
-        </footer>
+        <div className="all-centered">
+          <footer>
+            <p>
+              Made by <a href="https://github.com/CookiBytes">CookiBytes</a>
+            </p>
+          </footer>
+        </div>
       </div>
     </React.Fragment>
   );

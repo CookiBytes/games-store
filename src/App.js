@@ -12,6 +12,7 @@ import "./css/button.css";
 import "./css/spaces.css";
 import "./css/footer.css";
 import "./css/products.css";
+import "./css/selection.css";
 import "./css/pagenotfound.css";
 
 function App() {

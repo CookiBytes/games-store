@@ -10,6 +10,9 @@ https://codepen.io/rachelandrew/pen/YqqdXL
 
 Select - CodePen
 https://codepen.io/raubaca/pen/VejpQP
+
+Homepage - CodePen
+https://codepen.io/bradtraversy/pen/MNEgoJ
 */
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap");
@@ -19,12 +22,9 @@ https://codepen.io/raubaca/pen/VejpQP
   box-sizing: border-box;
 }
 
-body {
+.body {
   background-color: white;
   color: black;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
   height: 100%;
   margin: 0;
   flex-direction: column;
@@ -56,20 +56,16 @@ img {
   border-radius: 5px;
 }
 
+.all-centered {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
 .letsgopadding {
   padding: 10px;
 }
 
 .big-text {
   font-size: 2.8em;
-}
-
-::-moz-selection {
-  color: black;
-  background: #f0e395;
-}
-
-::selection {
-  color: black;
-  background: #f0e395;
 }

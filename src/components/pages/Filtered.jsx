@@ -99,51 +99,53 @@ function Filtered({ setCart, cart }) {
   const [category, setCategory] = useState(FUN);
 
   return (
-    <div className="letsgopadding">
-      <h1 className="big-text">Filter</h1>
+    <div className="all-centered">
+      <div className="letsgopadding">
+        <h1 className="big-text">Filter</h1>
 
-      {/* Filter */}
-      <div className="select-container">
-        <div className="select">
-          <select
-            name="slct"
-            id="slct"
-            onChange={(event) => setCategory(event.target.value)}
-          >
-            <option value={FUN}>{FUN}</option>
-            <option value={ADVENTURE}>{ADVENTURE}</option>
-          </select>
+        {/* Filter */}
+        <div className="select-container">
+          <div className="select">
+            <select
+              name="slct"
+              id="slct"
+              onChange={(event) => setCategory(event.target.value)}
+            >
+              <option value={FUN}>{FUN}</option>
+              <option value={ADVENTURE}>{ADVENTURE}</option>
+            </select>
+          </div>
         </div>
-      </div>
 
-      {/* Cards */}
-      <div className="filtered-products">
-        <ul className="flex cards">
-          {getProductsInCategory().map((product, index) => (
-            <li key={index}>
-              <h2>{product.name}</h2>
-              <div className="space3"></div>
-              <img src={product.image} alt={product.name} />
-              <div className="space"></div>
-              <div className="buy-product">
-                <button onClick={() => (window.location.href = product.link)}>
-                  Buy
-                </button>
-              </div>
-              <div className="price-colour">
-                <h4>${product.cost}</h4>
-              </div>
-              <div className="cart-container">
-                <div className="space2"></div>
-                <div className="product-icon">
-                  <a className="cart" onClick={() => addToCart(product)}>
-                    <FaCartPlus />
-                  </a>
+        {/* Cards */}
+        <div className="filtered-products">
+          <ul className="flex cards">
+            {getProductsInCategory().map((product, index) => (
+              <li key={index}>
+                <h2>{product.name}</h2>
+                <div className="space3"></div>
+                <img src={product.image} alt={product.name} />
+                <div className="space"></div>
+                <div className="buy-product">
+                  <button onClick={() => (window.location.href = product.link)}>
+                    Buy
+                  </button>
                 </div>
-              </div>
-            </li>
-          ))}
-        </ul>
+                <div className="price-colour">
+                  <h4>${product.cost}</h4>
+                </div>
+                <div className="cart-container">
+                  <div className="space2"></div>
+                  <div className="product-icon">
+                    <a className="cart" onClick={() => addToCart(product)}>
+                      <FaCartPlus />
+                    </a>
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );
