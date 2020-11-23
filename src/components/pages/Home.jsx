@@ -7,7 +7,7 @@ function Home() {
       <section class="section-a">
         <div class="home-container">
           <div>
-            <h1>The latest games.</h1>
+            <h1>Trending games, handpicked.</h1>
             <p>
               View all the currently trending games, handpicked with the title,
               image, price, and link!
