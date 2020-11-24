@@ -24,20 +24,16 @@ https://codepen.io/bradtraversy/pen/MNEgoJ
 
 html,
 body {
-  min-height: 100vh;
+  height: 100%;
 }
 
-.body {
+body {
   background-color: white;
   color: black;
   height: 100%;
   margin: 0;
   display: flex;
   flex-direction: column;
-}
-
-#page-footer {
-  margin-top: auto;
 }
 
 h1 {

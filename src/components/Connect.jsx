@@ -19,7 +19,7 @@ function Connect() {
   return (
     <React.Fragment>
       {/* Content */}
-      <div className="content">
+      <div className="content footer-content">
         {/* Navbar */}
         <div className="navbar">
           <ul>
@@ -69,7 +69,7 @@ function Connect() {
 
         {/* Footer */}
         <div className="space5"></div>
-        <div className="footer-content"></div>
+        {/* <div className="footer-content"></div> */}
         <div className="all-centered">
           <footer>
             <p>

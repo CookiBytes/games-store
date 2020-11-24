@@ -1,12 +1,17 @@
 footer {
-  /* padding: 20px;
+  /* Bottom of the Page
+
+  padding: 20px;
   background-color: #d15c95;
   color: white;
   flex-shrink: 0; */
 
-  /* position: fixed;
+  /* Scroll with Footer */
+
+  position: fixed;
   bottom: 0;
-  width: 100%; */
+  width: 100%;
+
   background: #d15c95;
   color: white;
   padding: 12px;
@@ -16,6 +21,22 @@ footer a {
   text-decoration: line-through;
 }
 
-.footer-content {
-  flex: 1 0 auto;
+/* .footer,
+.push {
+  height: 142px;
 }
+
+.footer-content {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -142px;
+}
+
+#page-footer {
+  margin-top: auto;
+} */
+
+/* .footer-content {
+  flex: 1 0 auto;
+} */
