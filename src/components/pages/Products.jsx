@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { FaCartPlus } from "react-icons/fa";
+import { FaCartPlus, FaMinus } from "react-icons/fa";
 
 toast.configure();
 
@@ -113,6 +113,22 @@ function Products({ setCart, cart }) {
                         <a className="cart" onClick={() => addToCart(product)}>
                           <FaCartPlus />
                         </a>
+                        {/* {product != addToCart(product) && (
+                          <a
+                            className="cart"
+                            onClick={() => addToCart(product)}
+                          >
+                            <FaCartPlus />
+                          </a>
+                        )}
+                        {product === addToCart(product) && (
+                          <a
+                            className="cart"
+                            onClick={() => addToCart(product)}
+                          >
+                            <FaMinus />
+                          </a>
+                        )} */}
                       </div>
                     </div>
                   </li>

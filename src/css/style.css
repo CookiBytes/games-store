@@ -22,12 +22,22 @@ https://codepen.io/bradtraversy/pen/MNEgoJ
   box-sizing: border-box;
 }
 
+html,
+body {
+  min-height: 100vh;
+}
+
 .body {
   background-color: white;
   color: black;
   height: 100%;
   margin: 0;
+  display: flex;
   flex-direction: column;
+}
+
+#page-footer {
+  margin-top: auto;
 }
 
 h1 {
