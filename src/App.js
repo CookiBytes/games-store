@@ -4,19 +4,18 @@ import PageNotFound from "./components/pages/PageNotFound.jsx";
 import { Route, Switch, BrowserRouter } from "react-router-dom";
 
 // CSS
-import "./css/home.css";
-import "./css/style.css";
-import "./css/icons.css";
-import "./css/navbar.css";
-import "./css/search.css";
-import "./css/select.css";
-import "./css/button.css";
-import "./css/spaces.css";
-import "./css/footer.css";
+import "./css/pages/pagenotfound.css";
+import "./css/special/scrollbar.css";
+import "./css/special/selection.css";
+import "./css/buttons/button.css";
+import "./css/special/select.css";
+import "./css/updown/footer.css";
+import "./css/buttons/icons.css";
+import "./css/updown/navbar.css";
+import "./css/pages/home.css";
 import "./css/products.css";
-import "./css/selection.css";
-import "./css/scrollbar.css";
-import "./css/pagenotfound.css";
+import "./css/spaces.css";
+import "./css/style.css";
 
 function App() {
   return (
